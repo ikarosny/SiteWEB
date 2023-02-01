@@ -1,0 +1,117 @@
+header {
+    background: #dba3cd;
+    }
+    h1 img{
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    }
+    nav ul{
+    border: 1px solid #59429d;
+    padding: 15px 0;
+    background: #fff;
+    }
+    nav li{
+    display: inline-block;
+    margin-left: 200px;
+    }
+    nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 25px;
+    }
+    nav li :hover{
+    background: #ccbbff;
+    box-shadow: 5px 5px 5px rgb(0,0,2);
+    }
+    .bloco-ambiente{
+    display:flex;
+    justify-content: space-evenly;
+    }
+    .img-ambiente{
+    width: 150px;
+    }
+    .ambiente li{
+    margin-top:30px;
+    display: inline-block;
+    
+    }
+    .txt-footer{
+    margin-top: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 25px;
+    text-align: center;
+    }
+    @font-face{
+        font-family: minhaFonte;
+        src: url(Better\ Together.ttf);
+    }
+    /*main > h2{
+        color: rgb(89,66,157);
+        text-shadow: 0 0 20px rgb(161,146,206);
+        margin-top: 50px;
+        text-align: center;
+        font-size: 150px;
+    }*/
+    main > h3{
+        text-align: center;
+        font-size: 50px;
+    }
+    main > h4{
+        color: rgb(89,66,157);
+        font-family: minhaFonte;
+        font-size: 150px;
+        text-align: center;
+        text-shadow: 0 0 20px rgb(161,146,206);
+    }
+    .number{
+    font-size: 150px;
+    color: rgb(89,66,157);
+    text-shadow: 0 0 20px rgb(161,146,206);
+    }
+    .txt{
+    font-size: 25px;
+    text-align: center;
+    margin-left: 150px;
+    }
+    .cuidados ul li{
+    display: inline-block;
+    list-style: none;
+    display: block;
+    margin-right: auto;
+    width: 50%;
+    }
+    .cuidados li{
+    display: inline-block;
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 15%;
+    }
+    /*página sobre*/
+    .titulo {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 50px;
+    }
+    .insta ul li{
+    display: inline-block;
+    margin-left: 20px;
+    }
+    .container{
+    display: flex;
+    justify-content: space-between;
+    }
+    .img-aline{
+    width:300px;
+    }
+    .img-aline ul li {
+    width:300px;
+    }
