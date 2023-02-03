@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
     <head>
         <title>Aline Beauty</title>
-        <link rel="stylesheet" href="main.css">
-        <meta charset="UTF-8">
+	<link rel="stylesheet" href="../CSS/reset.css">
+        <link rel="stylesheet" href="../CSS/main2.css">
     </head>
     <body>
+        <main>
         <div class="insta">
             <ul>
             <li><a href="https://www.instagram.com/beautyalinedeff/"><img src="../IMG/instagram.png" width="100px"></a></li>
             <li><img src="../IMG/Design sem nome.png" width="35px"></li>
             </ul>
         </div>
-        <main>
-        <header class="menu-principal">
-            <img class="logo" src="../IMG/logo.png" >
-        </header>
-        <div class="opções">
+        <header>
+		<div class="menu-principal">
+		<img src="../IMG/logo.png" alt="Logo Aline de França Beauty" >
+        	<nav>
             <ul>
                 <li><a href="./pag-inicial.html">Início</a></li>
                 <li><a href="./Sobre.html">Sobre</a></li>
                 <li><a href="./agendamento.html">Agendamentos</a></li>
                 <li><a href="./Serviços.html">Serviços</a></li>
             </ul>
+		</nav>
         </div>
+	</header>
         <main class="container">
-        <div class="propaganda">
+        <div class="foto">
             <ul>
                 <li><img src="../IMG/antes e depois.jpeg" width="250px"></li>
                 <li><img src="../IMG/cilios.jpeg" width="250px"></li>
@@ -35,7 +37,7 @@
         </div>
         <div class="formulario">
         <h1 class="titulo">Agendamento</h1>
-        <p class="subtitulo">Complete suas informações</p>
+        <p class="txt-info">Complete suas informações</p>
         <br>
         <form name="form1" action="gravar.jsp" method="post">
                 <div class="campo">
@@ -45,7 +47,7 @@
                 <br>
                 <div class="campo">
                 <label for="nome"><strong>Telefone:</strong></label>
-                <input type="text" name="Telefone" id="Telefone" required pattern="\d{2} \d{5}-\d{4}$">
+                <input type="text" name="Telefone" id="Telefone" required placeholder="(11) XXXXX-XXXX">
                 </div>
                 <br>
                 <br>
@@ -65,7 +67,7 @@
                 <br>
                 <div class="campo">
                 <label for="nome"><strong>Data:</strong></label>
-                <input type="date" name="data" id="data" required="required" />
+                <input type="date" name="data" id="data" required>
                 </div>
                 <br>
                 <br>
@@ -94,7 +96,7 @@
 
         </form>
         </div>
-        <div class="propaganda1">
+        <div class="foto">
             <ul>
                 <li><img src="../IMG/design s.jpeg" width="210px"></li>
                 <li><img src="../IMG/depois.jpeg" width="210px"></li>
@@ -102,77 +104,4 @@
             </ul>
         </div>
         </main>
-        <script>
-            
-            function verificar()
-            {
-                
-                var n, t, c, p, l;
-                n = document.form1.Nome.value;
-                t = document.form1.Telefone.value;
-                p = document.form1.procedimento.value;
-                c = document.form1.CEP.value;
-                l = document.form1.Local.value;
-                d = document.form1.domicilio.value;
-                date = document.form1.data.value;
-		
-                
-                if (n.length==0)
-                {
-                    alert("Preencha o campo Nome");
-                    document.form1.Nome.style.background= "#dba3cd";
-                    document.form1.Nome.focus();
-		
-                    return false ;
-                    
-                }
-                if (t.length==0 || t.length <9 )
-                {
-                    alert("Verifique o numero Telefone");
-                    document.form1.Telefone.style.background= "#dba3cd";
-                    document.form1.Telefone.focus();
-                    return false ;
-
-                }
-
-                var quant = 0 ;
-                if( document.form1.procedimento[0].checked ) {  quant++ ;  }
-                if( document.form1.procedimento[1].checked ) {  quant++ ;  }
-                if( document.form1.procedimento[2].checked ) {  quant++ ;  }
-                if( document.form1.procedimento[3].checked ) {  quant++ ;  }
-
-                if (quant ==0 || quant >=3)
-                {
-                    alert("Escolha ao menos um procedimento. Lembrando que há um limite de dois procedimentos por cliente.");
-                    
-                    return false ;
-                }
-
-         	    if (d == "Não")
-		        {
-		            document.form1.submit();
-			        return true;
-		        }
-                if (c.length == 0 || c.length <7)
-                {
-                    alert("É necessário um CEP válido para consulta.");
-                    document.form1.CEP.style.background = "#dba3cd";
-                    document.form1.CEP.focus();
-                    return false;
-                }
-                if (l.length == 0)
-                {
-                    alert("É necessário que especifique onde será o procedimento.");
-                    document.form1.Local.style.background = "#dba3cd";
-                    document.form1.Local.focus();
-                    return false;
-                }
-
-
-                document.form1.submit();
-            }
-            
-
-            
-
-        </script>
+        <script src="verificaçao.js"></script>
