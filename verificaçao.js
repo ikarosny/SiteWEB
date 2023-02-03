@@ -62,6 +62,5 @@ function verificar()
         return false;
     }
 
-
     document.form1.submit();
 }
